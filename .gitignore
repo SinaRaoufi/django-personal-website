@@ -1,1 +1,6 @@
-__pycache__/
+# Byte-compiled / optimized / DLL files
+personal_website/__pycache__/
+*.py[cod]
+*$py.class
+
+personal_env/
