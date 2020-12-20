@@ -1,0 +1,400 @@
+/* ------------------------------------------------
+ Author: ArtStyles (Art)
+ 
+ Template Name: 
+ version: 1.0.0
+------------------------------------------------ */
+/* -----------------------------------------------------------------
+    - General Styles
+----------------------------------------------------------------- */
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: iransans;
+}
+@font-face {
+  font-family: iransans;
+  src: url('../font/IRANSansWeb(FaNum).ttf');
+}
+.bg-triangles {
+  background-position: right top, left bottom;
+}
+
+.input {
+  text-align: right;
+  text-align: right;
+}
+.input__icon {
+  padding-left: 0;
+  padding-right: 2.8rem;
+}
+
+.form-group .font-icon {
+  left: auto;
+  right: 0;
+}
+
+.help-block {
+  padding-left: 0;
+  padding-right: .4rem;
+}
+
+.custom-control-label {
+  padding-left: 0;
+  padding-right: .5rem;
+}
+
+.btn .font-icon {
+  margin-left: .2rem;
+  margin-right: 0;
+}
+
+.dropdown-menu::before {
+  left: auto;
+  right: 1.7rem;
+}
+
+/* -----------------------------------------------------------------
+    - Typography
+----------------------------------------------------------------- */
+.title-icon {
+  margin-left: .5rem;
+  margin-right: 0;
+}
+.title__separate::before, .title__separate::after {
+  left: auto;
+  right: 0;
+}
+
+.block-quote {
+  margin: 1.8rem .2rem 1.8rem 0;
+}
+@media only screen and (max-width: 992px) {
+  .block-quote {
+    padding-left: 0;
+    padding-right: 3.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .block-quote {
+    padding-right: 0;
+  }
+}
+.block-quote::before {
+  left: auto;
+  right: -2.6rem;
+}
+@media only screen and (max-width: 992px) {
+  .block-quote::before {
+    left: auto;
+    right: 0;
+  }
+}
+.block-quote__author {
+  padding-left: 0;
+  padding-right: 3rem;
+}
+@media only screen and (max-width: 768px) {
+  .block-quote__author {
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+}
+.block-quote__author::before {
+  left: auto;
+  right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Preloader
+----------------------------------------------------------------- */
+.preloader__progress {
+  left: auto;
+  right: 0;
+}
+.preloader__progress span {
+  left: auto;
+  right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Menu
+----------------------------------------------------------------- */
+.circle-menu {
+  left: 0;
+  right: auto;
+}
+
+.hamburger .line:nth-child(2) {
+  margin-left: 0;
+  margin-right: 4px;
+}
+.hamburger.is-active .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+@media only screen and (max-width: 580px) {
+  .hamburger.is-active .line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-wrap::before {
+    left: 0;
+    right: auto;
+  }
+}
+
+.nav {
+  border-radius: 3rem 0 0 0;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 2.5rem;
+  padding-right: 0;
+}
+.nav::before {
+  left: auto;
+  right: -124px;
+  transform: scaleX(-1);
+}
+@media only screen and (max-width: 992px) {
+  .nav {
+    border-radius: 1.875rem 1.875rem 0 0;
+  }
+}
+.nav__item {
+  margin-left: .4rem;
+  margin-right: 0;
+}
+@media only screen and (max-width: 768px) {
+  .nav__item {
+    margin-left: 0;
+  }
+}
+.nav__item:last-child {
+  margin-left: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Shared
+----------------------------------------------------------------- */
+.wrapper {
+  border-radius: 0 3rem 3rem 3rem;
+}
+@media only screen and (max-width: 992px) {
+  .wrapper {
+    border-radius: 0 0 1.875rem 1.875rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    border-radius: 1.875rem;
+  }
+}
+
+.social__link {
+  margin-left: 0;
+  margin-right: .8rem;
+}
+.social__link:first-child {
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Sidebar
+----------------------------------------------------------------- */
+.contact-block {
+  padding-right: 0;
+}
+.contact-block .font-icon {
+  margin-left: .875rem;
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Testimonials
+----------------------------------------------------------------- */
+.review-item {
+  background-position: left 1.875rem top 1.875rem;
+}
+@media only screen and (max-width: 580px) {
+  .review-item {
+    background-position: left 1rem top 1rem;
+  }
+}
+.review-item .title {
+  margin-left: 0;
+  margin-right: 5.5rem;
+}
+@media only screen and (max-width: 580px) {
+  .review-item .title {
+    margin-right: 0;
+  }
+}
+
+/* -----------------------------------------------------------------
+    - Timeline
+----------------------------------------------------------------- */
+.timeline {
+  padding-left: 0;
+  padding-right: 1.1rem;
+}
+.timeline__item {
+  border-left: 0;
+  border-right: 1px solid #F0F0F6;
+  padding-left: 0;
+  padding-right: 1.4rem;
+}
+.timeline__item::before {
+  left: auto;
+  right: -5px;
+}
+
+/* -----------------------------------------------------------------
+    - Progress
+----------------------------------------------------------------- */
+.progress {
+  text-align: left;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .progress-text span:nth-child(2) {
+    float: left;
+  }
+}
+/* -----------------------------------------------------------------
+    - Portfolio
+----------------------------------------------------------------- */
+.gallery-grid__caption {
+  padding-left: 0;
+  padding-right: .2rem;
+}
+
+@media only screen and (min-width: 769px) {
+  .filter__item {
+    padding-left: 1.2rem;
+    padding-right: 0;
+  }
+  .filter__item:last-child {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .select {
+    padding-left: .8rem;
+    padding-right: 1rem;
+    text-align: right;
+  }
+  .select .placeholder:after {
+    left: 2px;
+    right: auto;
+  }
+  .select ul {
+    left: auto;
+    right: 0;
+  }
+  .select ul li {
+    text-align: right;
+  }
+}
+/* -----------------------------------------------------------------
+    - News
+----------------------------------------------------------------- */
+.news-item__date {
+  border-radius: 0 1.25rem 0 1.25rem;
+}
+
+/* -----------------------------------------------------------------
+    - Single post
+----------------------------------------------------------------- */
+.footer-post__share .font-icon {
+  margin-left: .7rem;
+  margin-right: 0;
+}
+
+.comment-box .comment-box {
+  margin-left: 0;
+  margin-right: 3rem;
+}
+@media only screen and (max-width: 580px) {
+  .comment-box .comment-box {
+    margin-left: 0;
+    margin-right: 1.2rem;
+  }
+}
+.comment-box__inner {
+  padding: 1.25rem 1.4rem 1.0rem 1.25rem;
+}
+@media only screen and (max-width: 580px) {
+  .comment-box__inner {
+    padding: 1rem 1.1rem 1rem 1rem;
+  }
+}
+.comment-box .avatar {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+.comment-box__footer li {
+  margin-left: 2rem;
+  margin-right: 0;
+}
+@media only screen and (max-width: 580px) {
+  .comment-box__footer li {
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+}
+.comment-box__footer li:last-child {
+  margin-left: 0;
+}
+.comment-box__footer span {
+  padding-left: 0;
+  padding-right: .4rem;
+}
+
+.comment-form .textarea {
+  padding: 1.1rem 3.6rem 1rem 4.5rem;
+}
+.comment-form .btn {
+  margin-left: .5rem;
+  margin-right: 0;
+  left: 0;
+  right: auto;
+}
+.comment-form .dropdown {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+.comment-form .dropdown-menu {
+  margin-left: 0;
+  margin-right: -1.5rem;
+  right: 0;
+}
+
+.social-auth__item {
+  margin-left: .4rem;
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Contact
+----------------------------------------------------------------- */
+#contact-form .text-right {
+  text-align: left !important;
+}
+
+@media only screen and (min-width: 768px) {
+  #contact-form .text-md-left {
+    text-align: right !important;
+  }
+}
+
+/* -----------------------------------------------------------------
+    - Other
+----------------------------------------------------------------- */
+.back-to-top {
+  left: 40px;
+  right: auto;
+}
+
+/*# sourceMappingURL=style-rtl.css.map */
