@@ -1,7 +1,20 @@
+	{% url 'about-me' as about_me %}
+	{% url 'resume' as resume %}
+	
 	<div class="nav-wrap">
 		<ul class="nav">
-			<li class="nav__item"><a class="active" href="about.html">درباره  من</a></li>
-			<li class="nav__item"><a href="resume.html">رزومه</a></li>
+		{% if request.path == about_me %}
+			<li class="nav__item"><a class="active" href="{{ about_me }}">درباره  من</a></li>
+			{% else %}
+			<li class="nav__item"><a href="{{ about_me }}">درباره  من</a></li>
+		{% endif %}
+
+		{% if request.path == resume %}
+			<li class="nav__item"><a class="active" href="{{ resume }}">رزومه</a></li>
+			{% else %}
+			<li class="nav__item"><a href="{{ resume }}">رزومه</a></li>
+		{% endif %}
+
 			<li class="nav__item"><a href="blog.html">وبلاگ</a></li>
 			<li class="nav__item"><a href="contact.html">تماس با من</a></li>
 		</ul>
