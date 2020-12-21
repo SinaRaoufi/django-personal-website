@@ -1,5 +1,6 @@
 	{% url 'about-me' as about_me %}
 	{% url 'resume' as resume %}
+	{% url 'contact-me' as contact_me %}
 	
 	<div class="nav-wrap">
 		<ul class="nav">
@@ -16,6 +17,12 @@
 		{% endif %}
 
 			<li class="nav__item"><a href="blog.html">وبلاگ</a></li>
-			<li class="nav__item"><a href="contact.html">تماس با من</a></li>
+		
+		{% if request.path == contact_me %}
+			<li class="nav__item"><a class="active" href="{{ contact_me }}">تماس با من</a></li>
+			{% else %}
+			<li class="nav__item"><a href="{{ contact_me }}">تماس با من</a></li>
+		{% endif %}
+
 		</ul>
 	</div>

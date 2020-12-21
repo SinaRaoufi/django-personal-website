@@ -7,3 +7,7 @@ def about_me(request):
 
 def resume(request):
     return render(request, "resume.html", {})
+
+
+def contact_me(request):
+    return render(request, "contact-me.html", {})
