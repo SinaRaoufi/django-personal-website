@@ -1,0 +1,293 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>قالب رزومه</title>
+
+	<!-- Meta Data -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="author" content="ArtTemplate" />
+    <meta name="description" content="vCard" />
+
+    <!-- Twitter data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ArtTemplates">
+    <meta name="twitter:title" content="vCard">
+    <meta name="twitter:description" content="vCard">
+    <meta name="twitter:image" content="{% static 'images/social.html' %}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="ArtTemplate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="your url website" />
+    <meta property="og:image" content="{% static 'images/social.html' %}" />
+    <meta property="og:description" content="vCard" />
+    <meta property="og:site_name" content="vCard" />
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/favicons/apple-touch-icon-144x144.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicons/apple-touch-icon-114x114.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicons/apple-touch-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicons/apple-touch-icon-57x57.png' %}">
+	<link rel="shortcut icon" href="{% static 'images/favicons/favicon.png' %}" type="image/png">
+
+    <!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/style-rtl.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'demo/style-demo.css' %}"/>
+	
+</head>
+<body class="bg-triangles">
+<!-- Preloader -->
+<div class="preloader">
+	<div class="preloader__wrap">
+		<svg class="spinner-container" viewBox="0 0 52 52">
+			<circle class="path" cx="26px" cy="26px" r="20px" fill="none" stroke-width="4px"></circle>
+		</svg>
+		<div class="preloader__progress"><span></span></div>
+	</div>
+</div>
+
+<main class="main">
+	<!-- Menu -->
+	<div class="circle-menu">
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="hamburger__text">منو</div>
+		</div>
+	</div>
+
+	<div class="nav-wrap">
+		<ul class="nav">
+			<li class="nav__item"><a class="active" href="about.html">درباره  من</a></li>
+			<li class="nav__item"><a href="resume.html">رزومه</a></li>
+			<li class="nav__item"><a href="portfolio.html">نمونه کارها</a></li>
+			<li class="nav__item"><a href="blog.html">وبلاگ</a></li>
+			<li class="nav__item"><a href="contact.html">تماس با من</a></li>
+		</ul>
+	</div>
+
+	<div class="wrapper wrapper--shadow-orange">
+		<!-- Sidebar -->
+		<aside class="sidebar js-scroll">
+			<div>
+				<div class="avatar-wrap">
+					<svg class="avatar avatar--180" viewBox="0 0 188 188">
+						<g class="avatar__box">
+							<image xlink:href="{% static 'img/avatar-1.jpg' %}" height="100%" width="100%"></image>
+						</g>
+					</svg>
+				</div>
+				<div class="text-center">
+					<h3 class="title sidebar__user-name"><span class="weight--500">نام  </span> کاربر </h3>
+					<div class="badge badge--gray">طراح و توسعه دهنده وب</div>
+
+					<!-- Social -->
+					<div class="social">
+						<a class="social__link" href="https://www.facebook.com/"><i class="font-icon icon-facebook"></i></a>
+						<a class="social__link" href="https://www.behance.com/"><i class="font-icon icon-twitter"></i></a>
+						<a class="social__link" href="https://www.linkedin.com/"><i class="font-icon icon-linkedin2"></i></a>
+					</div>
+				</div>
+
+				<ul class="contact-block">
+					<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="روز تولد">
+						<i class="font-icon icon-calendar2"></i>25 آبان 1367
+					</li>
+					<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="نشانی">
+						<i class="font-icon icon-map-pin"></i>تهران - ونک</li>
+					<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="پست الکترونیک">
+						<a href="mailto:example@mail.com"><i class="font-icon icon-mail"></i>info@gmail.com</a>
+					</li>
+					<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="تلفن">
+						<i class="font-icon icon-smartphone"></i>09123456789
+					</li>
+					<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="اسکایپ">
+						<a href="skype:skype-example"><i class="font-icon icon-skype"></i>Felecia_Brown</a>
+					</li>
+				</ul>
+			</div>
+			<a class="btn" href="#"><i class="font-icon icon-download"></i>رزومه را بارگیری کنید.</a>
+		</aside>
+
+		<!-- Content -->
+		<div class="content js-scroll">
+			<!-- About -->
+			<div class="section mt-0">
+				<h1 class="title title--h1 title__separate">درمورد من</h1>
+				<div class="pt-2 pt-sm-3">
+					<p>من مدیر خلاق و طراح UI / UX از سیدنی ، استرالیا هستم که در زمینه توسعه وب و رسانه های چاپی کار می کنم. من از تبدیل مشکلات پیچیده به طرح های ساده ، زیبا و بصری لذت می برم.</p>
+					<p class="mb-0">کار من ساخت وب سایت شما به گونه ای است که کاربردی و کاربر پسند باشد اما در عین حال جذاب باشد. علاوه بر این ، من لمس شخصی به محصول شما اضافه می کنم و مطمئن هستم که چشم نواز است و کاربرد آن آسان است. هدف من این است که پیام و هویت شما را با خلاقانه ترین راه بیان کنم. من طراحی وب را برای بسیاری از شرکتهای معروف مارک ایجاد کردم.</p>
+				</div>
+			</div>
+
+			<!-- What -->
+			<div class="section">
+				<h2 class="title title--h2">کاری که انجام می دهم</h2>
+				<div class="row">
+					<!-- Case Item -->
+					<div class="col-12 col-lg-6 case-item-wrap">
+						<div class="case-item">
+							<img class="case-item__icon" src="http://netgon.net/artstyles/v-card2/assets/icons/icon-design.svg" alt="">
+							<h3 class="title title--h3">طراحی وب سایت</h3>
+							<p class="case-item__caption">مدرن ترین و با کیفیت ترین طراحی ساخته شده در سطح حرفه ای. </p>
+						</div>
+					</div>
+
+					<!-- Case Item -->
+					<div class="col-12 col-lg-6 case-item-wrap">
+						<div class="case-item">
+							<img class="case-item__icon" src="http://netgon.net/artstyles/v-card2/assets/icons/icon-dev.svg" alt="">
+							<h3 class="title title--h3">توسعه وب</h3>
+							<p class="case-item__caption">توسعه با کیفیت بالا سایت ها در سطح حرفه ای.</p>
+						</div>
+					</div>
+
+					<!-- Case Item -->
+					<div class="col-12 col-lg-6 case-item-wrap">
+						<div class="case-item">
+							<img class="case-item__icon" src="http://netgon.net/artstyles/v-card2/assets/icons/icon-app.svg" alt="">
+							<h3 class="title title--h3">برنامه های تلفن همراه</h3>
+							<p class="case-item__caption">توسعه حرفه ای برنامه های iOS و Android.</p>
+						</div>
+					</div>
+
+					<!-- Case Item -->
+					<div class="col-12 col-lg-6 case-item-wrap">
+						<div class="case-item">
+							<img class="case-item__icon" src="http://netgon.net/artstyles/v-card2/assets/icons/icon-photo.svg" alt="">
+							<h3 class="title title--h3">عکاسی</h3>
+							<p class="case-item__caption">من عکس هایی با کیفیت بالا از هر گروه را در سطح حرفه ای می سازم.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Testimonials -->
+			<div class="section">
+				<h2 class="title title--h2">مشتریان می گویند</h2>
+				<div class="swiper-container js-carousel-review">
+					<div class="swiper-wrapper">
+						<!-- Item review -->
+						<div class="swiper-slide review-item">
+							<svg class="avatar avatar--80" viewBox="0 0 84 84">
+								<g class="avatar__hexagon">
+									<image xlink:href="{% static 'img/avatar-2.jpg' %}" height="100%" width="100%"></image>
+								</g>
+							</svg>
+							<h4 class="title title--h3">دانیل لوئیس</h4>
+							<p class="review-item__caption">فلیشیا برای ایجاد هویت شرکتی استخدام شد. ما از کار انجام شده بسیار راضی بودیم. او تجربه زیادی دارد و نگران نیاز مشتری است.</p>
+						</div>
+
+						<!-- Item review -->
+						<div class="swiper-slide review-item">
+							<svg class="avatar avatar--80" viewBox="0 0 84 84">
+								<g class="avatar__hexagon">
+									<image xlink:href="{% static 'img/avatar-3.jpg' %}" height="100%" width="100%"></image>
+								</g>
+							</svg>
+							<h4 class="title title--h3">جسیکا میلر</h4>
+							<p class="review-item__caption">فلیشیا برای ایجاد هویت شرکتی استخدام شد. ما از کار انجام شده بسیار راضی بودیم. او تجربه زیادی دارد و نگران نیاز مشتری است.</p>
+						</div>
+
+						<!-- Item review -->
+						<div class="swiper-slide review-item">
+							<svg class="avatar avatar--80" viewBox="0 0 84 84">
+								<g class="avatar__hexagon">
+									<image xlink:href="{% static 'img/avatar-4.jpg' %}" height="100%" width="100%"></image>
+								</g>
+							</svg>
+							<h4 class="title title--h3">تانیا روزی</h4>
+							<p class="review-item__caption">فلیشیا برای ایجاد هویت شرکتی استخدام شد. ما از کار انجام شده بسیار راضی بودیم. او تجربه زیادی دارد و نگران نیاز مشتری است.</p>
+						</div>
+
+						<!-- Item review -->
+						<div class="swiper-slide review-item">
+							<svg class="avatar avatar--80" viewBox="0 0 84 84">
+								<g class="avatar__hexagon">
+									<image xlink:href="{% static 'img/avatar-5.jpg' %}" height="100%" width="100%"></image>
+								</g>
+							</svg>
+							<h4 class="title title--h3">توماس کاسترو</h4>
+							<p class="review-item__caption">فلیشیا برای ایجاد هویت شرکتی استخدام شد. ما از کار انجام شده بسیار راضی بودیم. او تجربه زیادی دارد و نگران نیاز مشتری است.</p>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			<!-- Clients -->
+			<div class="section">
+				<h2 class="title title--h2">مشتری</h2>
+				<div class="swiper-container js-carousel-clients">
+					<div class="swiper-wrapper">
+						<!-- Item client -->
+						<div class="swiper-slide">
+							<a href="#"><img src="{% static 'img/download.jpg' %}" alt="لوگو"></a>
+						</div>
+
+						<!-- Item client -->
+						<div class="swiper-slide">
+							<a href="#"><img src="{% static 'img/download.jpg' %}" alt="لوگو"></a>
+						</div>
+
+						<!-- Item client -->
+						<div class="swiper-slide">
+							<a href="#"><img src="{% static 'img/download.jpg' %}" alt="لوگو"></a>
+						</div>
+
+						<!-- Item client -->
+						<div class="swiper-slide">
+							<a href="#"><img src="{% static 'img/download.jpg' %}" alt="لوگو"></a>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div><!-- Content End -->
+	</div><!-- Wrapper End -->
+</main>
+
+<!-- SVG masks -->
+<svg class="svg-defs">
+	<clipPath id="avatar-box">
+		<path d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z"></path>
+	</clipPath>
+	<clipPath id="avatar-hexagon">
+		<path d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z"></path>
+	</clipPath>
+</svg>
+
+<!-- Demo Menu -->
+<div class="btnSlideNav slideOpen"></div>
+<div class="btnSlideNav slideClose"></div>
+<ul class="slideNav">
+	<li class="slideNav__item rtl-mode"><h4 class="title title--5">صفحات بیشتر</h4> </li>
+	<li class="slideNav__item"><a href="one-page.html">1. صفحه </a><span class="lable-new">جدید </span></li>
+	<li class="slideNav__item"><a href="background-2.html">2. زمینه 2</a></li>
+	<li class="slideNav__item"><a href="background-3.html">3. زمینه 3</a></li>
+	<li class="slideNav__item"><a href="background-4.html">4. زمینه 4</a></li>
+	<li class="slideNav__item"><a href="background-5.html">5. زمینه 5</a></li>
+	<li class="slideNav__item"><a href="background-6.html">6. زمینه 6</a></li>
+</ul>
+<div class="overlay-slideNav"></div>
+<!-- Demo Menu -->
+
+<!-- JavaScripts -->
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/plugins.min.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+
+<script src="{% static 'demo/plugins-demo.js' %}"></script>
+</body>
+</html>
