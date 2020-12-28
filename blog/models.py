@@ -5,7 +5,13 @@ from django.utils import timezone
 # Create your models here.
 
 
+class PostManager(models.Manager):
+    def published(self):
+        return self.objects.filter(status='published')
+
+
 class Post(models.Model):
+    objects = PostManager()
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250,
                             unique_for_date='publish')
