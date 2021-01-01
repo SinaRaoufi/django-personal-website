@@ -1,0 +1,24 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Content -->
+		<div class="content js-scroll">
+			<div class="section mt-0">
+				<h1 class="title title--h1 title__separate">وبلاگ</h1>
+			</div>
+
+			<!-- News -->
+			<div class="news-grid section">
+				<!-- Post -->
+				{% for product in object_list %}
+					{% include 'blog/post_item_component.html' with product=product%}
+				{% endfor %}
+
+
+			</div>
+		</div><!-- Content End -->
+
+
+{% endblock content %}

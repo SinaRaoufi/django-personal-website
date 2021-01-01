@@ -1,0 +1,13 @@
+{% load static %}
+
+<article class="news-item box">
+	<div class="news-item__image-wrap overlay overlay--45">
+		<div class="news-item__date">16 <span>خرداد</span></div>
+		<a class="news-item__link" href="{{ product.get_absolute_url }}"></a>
+		<img class="cover lazyload" src="{% static 'img/image_02.jpg' %}" alt="{{ product.title }}">
+	</div>
+	<div class="news-item__caption">
+		<h3 class="title title--h3">{{ product.title }}</h3>
+		<p>{{ product.body|truncatewords:21 }}</p>
+	</div>
+</article>
