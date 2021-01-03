@@ -44,12 +44,11 @@
 			{% include 'blog/post_comments.html' %}
 
 			<!-- Tags -->
-			<p class="tags">
+			<p class="font-weight-bold">
 			برچسب ها: 
 			{% for tag in post.tags.all %}
-				<a href="{% url 'blog:post_list_by_tag' tag.slug %}">
+				<a class="badge badge-primary" href="{% url 'blog:post_list_by_tag' tag.slug %}">
 					{{ tag.name }}
-					{% if not forloop.last %}, {% endif %}
 				</a>
 			{% endfor %}
 			</p>
