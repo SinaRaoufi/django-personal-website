@@ -28,6 +28,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Email settings for SMTP
+# EMAIL_HOST = 'mail.sinaraoufi.com'
+# EMAIL_HOST_USER = 'sinaraoufi@outlook.com'
+# EMAIL_HOST_PASSWORD = 'S.i.N.a@&'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
 
 # Application definition
 
@@ -38,7 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'blog',
+    'taggit',
 ]
 
 MIDDLEWARE = [

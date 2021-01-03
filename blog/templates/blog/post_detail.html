@@ -40,108 +40,20 @@
 					<a class="footer-post__share" href="http://linkedin.com/"><i class="font-icon icon-linkedin2"></i><span>لینکدین</span></a>
 				</footer>
 			</div>
+			<!-- Comments -->
+			{% include 'blog/post_comments.html' %}
 
-			<div class="">
-				<h2 class="title title--h2">نظرات <span class="color--light">(3)</span></h2>
-
-				<!-- Comment -->
-				<div class="comment-box">
-					<div class="comment-box__inner">
-						<svg class="avatar avatar--60" viewBox="0 0 84 84">
-							<g class="avatar__hexagon">
-								<image xlink:href="../assets/img/avatar-2.jpg" height="100%" width="100%"></image>
-							</g>
-						</svg>
-						<div class="comment-box__body">
-							<h4 class="comment-box__details"><span>دانیل لوئی </span><span class="comment-box__details-date">5 دقیقه پیش</span></h4>
-							<p>مقاله ای بسیار جالب و آموزنده در مورد طراحی. چیزهای جدید و جالب فرا گرفتم.</p>
-
-							<ul class="comment-box__footer">
-								<li><i class="font-icon icon-like-fill"></i> <span>80</span></li>
-								<li><i class="font-icon icon-reply"></i> <span>پاسخ</span></li>
-							</ul>
-						</div>
-					</div>
-
-					<!-- Comment -->
-					<div class="comment-box">
-						<div class="comment-box__inner">
-							<svg class="avatar avatar--60" viewBox="0 0 84 84">
-								<g class="avatar__hexagon">
-									<image xlink:href="../assets/img/avatar-3.jpg" height="100%" width="100%"></image>
-								</g>
-							</svg>
-							<div class="comment-box__body">
-								<h4 class="comment-box__details"><span>جسیکا میلر </span><span class="comment-box__details-date">1 دقیقه پیش</span></h4>
-								<p>موافقم ، مقاله ای بسیار جالب. بسیار از شما متشکرم!<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-nerd.svg" alt="نرد"></p>
-
-								<ul class="comment-box__footer">
-									<li><i class="font-icon icon-like-fill"></i> <span>35</span></li>
-									<li><i class="font-icon icon-reply"></i> <span>پاسخ</span></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Comment -->
-				<div class="comment-box">
-					<div class="comment-box__inner">
-						<svg class="avatar avatar--60" viewBox="0 0 84 84">
-							<g class="avatar__hexagon">
-								<image xlink:href="../assets/img/avatar-6.jpg" height="100%" width="100%"></image>
-							</g>
-						</svg>
-						<div class="comment-box__body">
-							<h4 class="comment-box__details"><span>هنری ویلیام </span><span class="comment-box__details-date">15 دقیقه پیش</span></h4>
-							<p>از این مقاله خوب متشکرم. منتظر موارد جدید هستیم.</p>
-
-							<ul class="comment-box__footer">
-								<li><i class="font-icon icon-like-fill"></i> <span>15</span></li>
-								<li><i class="font-icon icon-reply"></i> <span>پاسخ</span></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<!-- Comment form -->
-				<ul class="social-auth">
-					<li class="social-auth__item">وارد شوید با:</li>
-					<li class="social-auth__item"><a class="social-auth__link" href="#"><i class="font-icon icon-facebook"></i></a></li>
-					<li class="social-auth__item"><a class="social-auth__link" href="#"><i class="font-icon icon-twitter"></i></a></li>
-					<li class="social-auth__item"><a class="social-auth__link" href="#"><i class="font-icon icon-dribbble"></i></a></li>
-					<li class="social-auth__item"><a class="social-auth__link" href="#"><i class="font-icon icon-behance"></i></a></li>
-				</ul>
-				<form class="comment-form">
-					<textarea id="commentForm" class="textarea textarea--white form-control" required="required" placeholder="ارسال نظر ..." rows="1"></textarea>
-					<button type="submit" class="btn"><i class="font-icon icon-send"></i></button>
-					<div class="dropdown dropup">
-						<i class="font-icon icon-smile" id="dropdownEmoji" data-toggle="dropdown" aria-haspopup="true"></i>
-						<div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownEmoji">
-							<div class="emoji-wrap">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-laughing.svg" title=": خندیدن:" alt="خندیدن">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-happy-2.svg" title=": مبارک 2:" alt="2 مبارک">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-crazy.svg" title=": دیوانه:" alt="دیوانه">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-bad.svg" title=": بد:" alt="بد">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-angry.svg" title=":خشمگین:" alt="خشمگین">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-happy.svg" title="خوشحال" alt="خوشحال">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-thinking.svg" title=":فكر كردن:" alt="فكر كردن">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-sad.svg" title=":غمگین:" alt="غمگین">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-pressure.svg" title=":فشار:" alt="فشار">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-in-love.svg" title=":عاشق:" alt="عاشق">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-nerd.svg" title=": خندیدن:" alt="نرد">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-happy-3.svg" title=": 3 مبارک:" alt="3 مبارک">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-shocked.svg" title=":شوکه:" alt="شوکه">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-wink.svg" title=":چشمک زن:" alt="چشمک زن">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-sweating.svg" title=":تعریق:" alt="تعریق">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-shocked-2.svg" title=": شوکه شده 2:" alt="شوکه شده 2">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-shocked-3.svg" title=": شوکه شده 3:" alt="3 شوکه شد">
-								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-sad-2.svg" title=": غمگین 2:" alt="غمگین 2">
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
+			<!-- Tags -->
+			<p class="tags">
+			برچسب ها: 
+			{% for tag in post.tags.all %}
+				<a href="{% url 'blog:post_list_by_tag' tag.slug %}">
+					{{ tag.name }}
+					{% if not forloop.last %}, {% endif %}
+				</a>
+			{% endfor %}
+			</p>
+			
 		</div><!-- Content End -->
 
 {% endblock content %}

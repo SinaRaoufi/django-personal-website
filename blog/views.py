@@ -2,14 +2,22 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post, Comment
 from .forms import CommentForm
 from django.views.generic import ListView
+from taggit.models import Tag
 
 # Create your views here.
 
 
 class PostListView(ListView):
-    queryset = Post.objects.published()
     # paginate_by = 8
     template_name = "blog/post-list.html"
+
+    def get_queryset(self):
+        queryset = Post.objects.published()
+        if bool(self.kwargs):
+            tag = get_object_or_404(Tag, slug=self.kwargs['tag_slug'])
+            queryset = queryset.filter(tags__in=[tag])
+            print(self.kwargs)
+        return queryset
 
 
 def post_detail(request, year, month, day, post):
