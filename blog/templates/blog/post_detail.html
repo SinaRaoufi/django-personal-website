@@ -7,12 +7,12 @@
 			<!-- Post -->
 			<div class="pb-3">
 				<header class="header-post">
-					<h1 class="title title--h1">{{ product.title }}</h1>
+					<h1 class="title title--h1">{{ post.title }}</h1>
 					<div class="caption-post">
 						<p>مهمتر از همه ، زندگی را به عنوان نمونه اولیه فکر کنید. ما می توانیم آزمایشاتی انجام دهیم ، اکتشافاتی را انجام دهیم و دیدگاه خود را تغییر دهیم. ما می توانیم به دنبال فرصت هایی برای تبدیل فرایندها به پروژه هایی باشیم که نتایج ملموس دارند.</p>
 					</div>
 					<div class="header-post__image-wrap">
-						<img class="cover lazyload" src="../assets/img/image_02.jpg" alt="">
+						<img class="cover lazyload" src="{{ post.image.url }}" alt="{{ post.title }}">
 					</div>
 				</header>
 				<div class="caption-post">

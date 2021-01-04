@@ -19,8 +19,8 @@
 			<!-- News -->
 			<div class="news-grid section">
 				<!-- Post -->
-				{% for product in object_list %}
-					{% include 'blog/post_item_component.html' with product=product%}
+				{% for post in object_list %}
+					{% include 'blog/post_item_component.html' with post=post%}
 				{% endfor %}
 
 

@@ -18,7 +18,7 @@ def get_filename_extension(filepath):
 def upload_image_path(instance, filename):
     name, extension = get_filename_extension(filename)
     final_name = f"{instance.id}-{instance.title}{extension}"
-    return f"Posts/{final_name}"
+    return f"posts/{final_name}"
 
 
 class PostManager(models.Manager):
