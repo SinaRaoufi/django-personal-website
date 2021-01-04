@@ -3,8 +3,22 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from django.shortcuts import reverse
 from taggit.managers import TaggableManager
+import os
 
 # Create your models here.
+
+
+# Retrieve name and extension of filepath
+def get_filename_extension(filepath):
+    base_name = os.path.basename(filepath)
+    name, extension = os.path.splitext(base_name)
+    return name, extension
+
+
+def upload_image_path(instance, filename):
+    name, extension = get_filename_extension(filename)
+    final_name = f"{instance.id}-{instance.title}{extension}"
+    return f"Posts/{final_name}"
 
 
 class PostManager(models.Manager):
@@ -20,6 +34,8 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name='blog_posts')
     body = models.TextField()
+    image = models.ImageField(
+        upload_to=upload_image_path, null=True, blank=True)
     tags = TaggableManager()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
