@@ -1,0 +1,74 @@
+            <div class="">
+				{% with comments.count as number_of_comments %}
+					<h2 class="title title--h2">نظرات <span class="color--light">({{ number_of_comments }})</span></h2>
+				{% endwith %}
+
+				<!-- Comment -->
+				{% for comment in comments %}
+				
+				<div class="comment-box">
+					<div class="comment-box__inner">
+						<div class="comment-box__body">
+							<h4 class="comment-box__details"><span>{{ comment.name }} </span><span class="comment-box__details-date">{{ comment.when_published }} پیش</span></h4>
+							<p>{{ comment.body }}</p>
+
+							<ul class="comment-box__footer">
+								<li><i class="font-icon icon-like-fill"></i> <span>0</span></li>
+								<li><i class="font-icon icon-reply"></i> <span>پاسخ</span></li>
+							</ul>
+						</div>
+					</div>
+				{% empty %}
+					<p>نظری برای این مطلب ثبت نشده است</p>
+
+				{% endfor %}
+
+				<!-- Comment form -->
+				<form class="comment-form" method="post">
+					{% csrf_token %}
+				<div class="row">
+
+					<div class="form-group col-12 col-md-6">
+						{{ comment_form.name }}
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div class="form-group col-12 col-md-6">
+						<i class="font-icon icon-at"></i>
+						{{ comment_form.email }}
+						<div class="help-block with-errors"></div>
+					</div>
+				</div>
+				<div class="form-group">
+					{{ comment_form.body }}
+				<div class="row">
+					<button type="submit" class="btn"><i class="font-icon icon-send"></i></button>
+					<div class="dropdown dropup">
+						<i class="font-icon icon-smile" id="dropdownEmoji" data-toggle="dropdown" aria-haspopup="true"></i>
+						<div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownEmoji">
+							<div class="emoji-wrap">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-laughing.svg" title=": خندیدن:" alt="خندیدن">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-happy-2.svg" title=": مبارک 2:" alt="2 مبارک">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-crazy.svg" title=": دیوانه:" alt="دیوانه">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-bad.svg" title=": بد:" alt="بد">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-angry.svg" title=":خشمگین:" alt="خشمگین">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-happy.svg" title="خوشحال" alt="خوشحال">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-thinking.svg" title=":فكر كردن:" alt="فكر كردن">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-sad.svg" title=":غمگین:" alt="غمگین">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-pressure.svg" title=":فشار:" alt="فشار">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-in-love.svg" title=":عاشق:" alt="عاشق">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-nerd.svg" title=": خندیدن:" alt="نرد">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-happy-3.svg" title=": 3 مبارک:" alt="3 مبارک">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-shocked.svg" title=":شوکه:" alt="شوکه">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-wink.svg" title=":چشمک زن:" alt="چشمک زن">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-sweating.svg" title=":تعریق:" alt="تعریق">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-shocked-2.svg" title=": شوکه شده 2:" alt="شوکه شده 2">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-shocked-3.svg" title=": شوکه شده 3:" alt="3 شوکه شد">
+								<img class="emoji" src="http://netgon.net/artstyles/v-card2/assets/icons/emoji/emoji-sad-2.svg" title=": غمگین 2:" alt="غمگین 2">
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				</form>
+			</div>

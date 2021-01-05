@@ -4,6 +4,8 @@ from django.utils import timezone
 from django.shortcuts import reverse
 from taggit.managers import TaggableManager
 import os
+import math
+from django.db.models import Q
 
 # Create your models here.
 
@@ -24,6 +26,14 @@ def upload_image_path(instance, filename):
 class PostManager(models.Manager):
     def published(self):
         return self.get_queryset().filter(status='published')
+
+    def search(self, query):
+        lookup = (
+            Q(title__icontains=query) |
+            Q(body__icontains=query) |
+            Q(tags__name__in=[query])
+        )
+        return self.published().filter(lookup).distinct()
 
 
 class Post(models.Model):
@@ -72,3 +82,39 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment by {self.name} on {self.post}"
+
+    def when_published(self):
+        now = timezone.now()
+
+        diff = now - self.created
+
+        if diff.days == 0 and diff.seconds >= 0 and diff.seconds < 60:
+            seconds = diff.seconds
+
+            return str(seconds) + "ثانیه"
+
+        if diff.days == 0 and diff.seconds >= 60 and diff.seconds < 3600:
+            minutes = math.floor(diff.seconds/60)
+
+            return str(minutes) + " دقیقه"
+
+        if diff.days == 0 and diff.seconds >= 3600 and diff.seconds < 86400:
+            hours = math.floor(diff.seconds/3600)
+
+            return str(hours) + " ساعت"
+
+        # 1 day to 30 days
+        if diff.days >= 1 and diff.days < 30:
+            days = diff.days
+
+            return str(days) + " روز"
+
+        if diff.days >= 30 and diff.days < 365:
+            months = math.floor(diff.days/30)
+
+            return str(months) + " ماه"
+
+        if diff.days >= 365:
+            years = math.floor(diff.days/365)
+
+            return str(years) + " سال"
