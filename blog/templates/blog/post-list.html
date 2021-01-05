@@ -10,10 +10,10 @@
 			</div>
 
 		<!-- Search form -->
-		<form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
+		<form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2" action="/blog/posts/search">
   			<input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-    				aria-label="Search">
-  			<i class="font-icon icon-linkedin" aria-hidden="true"></i>
+    				aria-label="Search" value="{{ request.GET.q }}" name="q">
+  			<i class="fas fa-search" aria-hidden="true"></i>
 		</form>
 			
 			<!-- News -->

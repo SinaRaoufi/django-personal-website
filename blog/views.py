@@ -20,6 +20,17 @@ class PostListView(ListView):
         return queryset
 
 
+class SearchPostList(ListView):
+    template_name = "blog/post-list.html"
+
+    def get_queryset(self):
+        request = self.request
+        query = request.GET.get('q')
+        if query is not None:
+            return Post.objects.search(query)
+        return Post.objects.published()
+
+
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post, slug=post,
                              status='published',
