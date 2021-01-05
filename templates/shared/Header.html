@@ -17,7 +17,7 @@
 			<li class="nav__item"><a href="{{ resume }}">رزومه</a></li>
 		{% endif %}
 
-		{% if request.path == post_list %}
+		{% if '/blog/' in request.path %}
 			<li class="nav__item"><a class="active" href="{{ post_list }}">وبلاگ</a></li>
 			{% else %}
 			<li class="nav__item"><a href="{{ post_list }}">وبلاگ</a></li>
