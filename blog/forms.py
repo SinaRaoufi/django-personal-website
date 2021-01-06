@@ -27,6 +27,6 @@ class CommentForm(forms.ModelForm):
             'body': forms.Textarea(attrs={"id": "commentForm",
                                           "class": "textarea textarea--white form-control",
                                           "required": "required",
-                                          "placeholder": "  ارسال نظر ...",
+                                          "placeholder": "ارسال نظر ...",
                                           "rows": "1"})
         }

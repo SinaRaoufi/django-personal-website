@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post, Comment
 from .forms import CommentForm
 from django.views.generic import ListView
@@ -47,6 +47,7 @@ def post_detail(request, year, month, day, post):
             new_comment = comment_form.save(commit=False)
             new_comment.post = post
             new_comment.save()
+            # return redirect('post_detail')
     else:
         comment_form = CommentForm()
 
