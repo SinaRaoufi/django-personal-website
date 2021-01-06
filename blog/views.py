@@ -31,12 +31,10 @@ class SearchPostList(ListView):
         return Post.objects.published()
 
 
-def post_detail(request, year, month, day, post):
+def post_detail(request, postID, post):
     post = get_object_or_404(Post, slug=post,
                              status='published',
-                             publish__year=year,
-                             publish__month=month,
-                             publish__day=day)
+                             id=postID)
 
     comments = post.comments.filter(active=True)
     new_comment = None
