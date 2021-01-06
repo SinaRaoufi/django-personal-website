@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     'blog',
     'taggit',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -113,10 +114,26 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+TINYMCE_DEFAULT_CONFIG = {
+
+    "height": "320px",
+    "width": "700px",
+    "menubar": "file edit insert format tools help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code codesample",
+    # "fullscreen insertdatetime media table paste code help wordcount spellchecker",
+    "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft | codesample"
+    "aligncenter alignright alignjustify | codesample | outdent indent |  numlist bullist checklist | forecolor "
+    "backcolor casechange permanentpen removeformat | pagebreak | charmap emoticons | "
+    "fullscreen  preview save | insertfile image media pageembed template link "
+    "a11ycheck ltr rtl | showcomments addcomment code",
+    # "custom_undo_redo_levels": 10,
+    # "language": "es_ES",  # To force a specific language instead of the Django current language.
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-ir'
 
 TIME_ZONE = 'UTC'
 
