@@ -8,6 +8,6 @@
 	</div>
 	<div class="news-item__caption">
 		<h3 class="title title--h3">{{ post.title }}</h3>
-		<p>{{ post.body|truncatewords:28 }}</p>
+		<p>{{ post.body|truncatewords:28|safe }}</p>
 	</div>
 </article>
