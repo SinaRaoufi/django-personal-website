@@ -2,7 +2,7 @@
 
 <article class="news-item box">
 	<div class="news-item__image-wrap overlay overlay--45">
-		<div class="news-item__date">16 <span>خرداد</span></div>
+		{% comment %} <div class="news-item__date">{{ post.publish.day }} <span>خرداد</span></div> {% endcomment %}
 		<a class="news-item__link" href="{{ post.get_absolute_url }}"></a>
 		<img class="cover lazyload" src="{{ post.image.url }}" alt="{{ post.title }}">
 	</div>
