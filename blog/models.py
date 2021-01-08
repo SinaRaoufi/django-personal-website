@@ -6,7 +6,7 @@ from taggit.managers import TaggableManager
 import os
 import math
 from django.db.models import Q
-from tinymce import models as tinymce_models
+from tinymce import HTMLField
 
 # Create your models here.
 
@@ -44,7 +44,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name='blog_posts')
     # body = models.TextField()
-    body = tinymce_models.HTMLField()
+    body = HTMLField('Content')
     image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
     tags = TaggableManager()

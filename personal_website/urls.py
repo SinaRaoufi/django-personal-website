@@ -25,6 +25,7 @@ urlpatterns = [
     path('resume', resume, name="resume"),
     path('contact-me', contact_me, name="contact-me"),
     path('blog/', include('blog.urls', namespace='blog')),
+    path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),
 ]
 
