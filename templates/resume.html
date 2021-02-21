@@ -1,4 +1,5 @@
 {% extends 'shared/_MainLayout.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -10,7 +11,7 @@
 
 			<!-- Experience -->
 			<div class="section">
-				<h2 class="title title--h2"><img class="title-icon" src="http://netgon.net/artstyles/v-card2/assets/icons/icon-education.svg" alt=""> تحصیلات</h2>
+				<h2 class="title title--h2"><img class="title-icon" src="{% static 'icons/icon-education.svg' %}" alt=""> تحصیلات</h2>
 				<div class="timeline">
 					<!-- Item -->
 					<article class="timeline__item">
@@ -25,7 +26,7 @@
 			</div>
 
 			<div class="section">
-				<h2 class="title title--h2"><img class="title-icon" src="http://netgon.net/artstyles/v-card2/assets/icons/icon-experience.svg" alt=""> تجربه</h2>
+				<h2 class="title title--h2"><img class="title-icon" src="https://netgon.net/artstyles/v-card2/assets/icons/icon-experience.svg" alt=""> تجربه</h2>
 				<div class="timeline">
 					<!-- Item -->
 					<article class="timeline__item">
