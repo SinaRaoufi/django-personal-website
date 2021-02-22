@@ -29,11 +29,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Email settings for SMTP
-# EMAIL_HOST = 'mail.sinaraoufi.com'
-# EMAIL_HOST_USER = 'sinaraoufi@outlook.com'
-# EMAIL_HOST_PASSWORD = 'S.i.N.a@&'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+# EMAIL_HOST = ''
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_PORT = 
+# EMAIL_USE_TLS = 
 
 
 # Application definition
